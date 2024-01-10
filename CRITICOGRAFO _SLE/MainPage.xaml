@@ -14,12 +14,13 @@
             Nombre
         </Label>
 
-        <Frame BackgroundColor="LightGray"
+        <Frame 
         WidthRequest="50"
         HeightRequest="20">
             <Entry Placeholder="Daniel"
                    TextColor="Red"
                    Keyboard="Text"
+                   x:Name="Nombre"
            />
         </Frame>
 
@@ -28,33 +29,34 @@
 
             <Label Grid.Row="0"
                    FontSize="30">Genero</Label>
-            <RadioButton Content="Femenino" Grid.Column="0" Grid.Row="1"/>
-            <RadioButton Content="Masculino" Grid.Column="1" Grid.Row="1"/>
+            <RadioButton Content="Femenino" Grid.Column="0" Grid.Row="1" x:Name="mujer"/>
+            <RadioButton Content="Masculino" Grid.Column="1" Grid.Row="1" x:Name="hombre"/>
 
             
             <Label Grid.Row="4" Grid.Column="1" Margin="-150,0,0,0" FontSize="20">Alto</Label>
-            <CheckBox Grid.Row="4" Grid.Column="0" Margin="10,-20,0,0" IsChecked="False" />
+            <CheckBox Grid.Row="4" Grid.Column="0" Margin="10,-20,0,0" IsChecked="False" x:Name="Alto" />
             <Label Grid.Row="5" Grid.Column="1" Margin="50,-42,0,0" FontSize="20">Feo</Label>
-            <CheckBox Grid.Row="5" Grid.Column="1" Margin="15,-106,0,0" IsChecked="False"></CheckBox>
+            <CheckBox Grid.Row="5" Grid.Column="1" Margin="15,-106,0,0" IsChecked="False" x:Name="Feo"></CheckBox>
             <Label Grid.Row="6" Grid.Column="0" Margin="45,-35,0,0" FontSize="20">Listo</Label>
-            <CheckBox Grid.Row="6" Grid.Column="0" Margin="10,-90,0,0" IsChecked="False"></CheckBox>
+            <CheckBox Grid.Row="6" Grid.Column="0" Margin="10,-90,0,0" IsChecked="False"  x:Name="Listo"></CheckBox>
             <Label Grid.Row="6" Grid.Column="1" Margin="45,-35,0,0" FontSize="20">Extravagante</Label>
-            <CheckBox Grid.Row="6" Grid.Column="1" Margin="10,-90,0,0" IsChecked="False"></CheckBox>
+            <CheckBox Grid.Row="6" Grid.Column="1" Margin="10,-90,0,0" IsChecked="False" x:Name="Extravagante" ></CheckBox>
             <Label Grid.Row="7" Grid.Column="1" Margin="45,-35,0,0" FontSize="20">Grande</Label>
-            <CheckBox Grid.Row="7" Grid.Column="1" Margin="10,-90,0,0" IsChecked="False"></CheckBox>
+            <CheckBox Grid.Row="7" Grid.Column="1" Margin="10,-90,0,0" IsChecked="False" x:Name="Grande"></CheckBox>
             <Label Grid.Row="7" Grid.Column="0" Margin="45,-35,0,0" FontSize="20">Raro</Label>
-            <CheckBox Grid.Row="7" Grid.Column="0" Margin="10,-90,0,0" IsChecked="False"></CheckBox>
+            <CheckBox Grid.Row="7" Grid.Column="0" Margin="10,-90,0,0" IsChecked="False" x:Name="Raro" ></CheckBox>
 
 
 
         </Grid>
 
-        <Button Text="Criticar" FontSize="25" BorderColor="Black"  BorderWidth="5" TextColor="Black"></Button>
+        <Button Text="Criticar" FontSize="25" BorderColor="Black"  BorderWidth="5" TextColor="Black" Clicked="Button_Clicked"></Button>
 
 
-        <Entry BackgroundColor="Gray" IsEnabled="False"/>
+        <Entry BackgroundColor="Gray" IsEnabled="False" x:Name="Resultado"/>
 
 
+        
 
 
 
