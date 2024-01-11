@@ -27,8 +27,8 @@ namespace CRITICOGRAFO__SLE
         {
             
             var nombre = Nombre.Text;
-            string resultado = "";
-
+            // string resultado = "";
+            int resultado = 0;
 
             if (mujer.IsChecked)
             {
@@ -37,27 +37,61 @@ namespace CRITICOGRAFO__SLE
                     opcionAlta += "alta";
 
                 }
+                if(!Alto.IsChecked)
+                {
+                    opcionAlta = "";
+                }
                 if (Feo.IsChecked)
                 {
                     opcionFea += "fea";
+                }
+                if (!Feo.IsChecked)
+                {
+                    opcionFea ="";
                 }
                 if (Listo.IsChecked)
                 {
                     opcionLista += "lista";
                 }
+                if (!Listo.IsChecked)
+                {
+                    opcionLista ="";
+                }
                 if (Extravagante.IsChecked)
                 {
                     opcionExtravagante += "extravagante";
+                }
+                if (!Extravagante.IsChecked)
+                {
+                    opcionExtravagante ="";
                 }
                 if (Grande.IsChecked)
                 {
                     opcionGrande += "grande";
                 }
+                if (!Grande.IsChecked)
+                {
+                    opcionGrande ="";
+                }
                 if (Raro.IsChecked)
                 {
                     opcionRaro += "rara";
                 }
-                resultado = nombre + " es "   + opcionAlta +  "," + opcionFea + "," +  opcionLista + "," + opcionExtravagante + ","  + opcionGrande + "," + opcionRaro;
+                if (!Raro.IsChecked)
+                {
+                    opcionRaro ="";
+                }
+                int contador = 0;
+                string[]arregloIntento = {opcionAlta,opcionFea,opcionLista,opcionExtravagante,opcionGrande,opcionRaro };
+                for (int i = 0; i < 5; i++)
+                {
+                    contador++;
+                    //resultado += arregloIntento[i];
+                    
+                }
+                resultado = contador;
+                Resultado.Text = resultado.ToString();
+                //resultado
             } 
             else
             {
@@ -91,7 +125,8 @@ namespace CRITICOGRAFO__SLE
                 }
                 
             }
-            Resultado.Text = resultado.ToString();
+            //Resultado.Text = resultado.ToString();
+            
             
            
 
