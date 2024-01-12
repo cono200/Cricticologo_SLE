@@ -25,110 +25,120 @@ namespace CRITICOGRAFO__SLE
         string generoLetras;
         private void Button_Clicked(object sender, EventArgs e)
         {
-            
-            var nombre = Nombre.Text;
-            // string resultado = "";
-            int resultado = 0;
+           
 
             if (mujer.IsChecked)
             {
-                if (Alto.IsChecked)
-                {
-                    opcionAlta += "alta";
-
-                }
-                if(!Alto.IsChecked)
-                {
-                    opcionAlta = "";
-                }
-                if (Feo.IsChecked)
-                {
-                    opcionFea += "fea";
-                }
-                if (!Feo.IsChecked)
-                {
-                    opcionFea ="";
-                }
-                if (Listo.IsChecked)
-                {
-                    opcionLista += "lista";
-                }
-                if (!Listo.IsChecked)
-                {
-                    opcionLista ="";
-                }
-                if (Extravagante.IsChecked)
-                {
-                    opcionExtravagante += "extravagante";
-                }
-                if (!Extravagante.IsChecked)
-                {
-                    opcionExtravagante ="";
-                }
-                if (Grande.IsChecked)
-                {
-                    opcionGrande += "grande";
-                }
-                if (!Grande.IsChecked)
-                {
-                    opcionGrande ="";
-                }
-                if (Raro.IsChecked)
-                {
-                    opcionRaro += "rara";
-                }
-                if (!Raro.IsChecked)
-                {
-                    opcionRaro ="";
-                }
+                string[] opciones = new string[6];
                 int contador = 0;
-                string[]arregloIntento = {opcionAlta,opcionFea,opcionLista,opcionExtravagante,opcionGrande,opcionRaro };
-                for (int i = 0; i < 5; i++)
-                {
-                    contador++;
-                    //resultado += arregloIntento[i];
-                    
-                }
-                resultado = contador;
-                Resultado.Text = resultado.ToString();
-                //resultado
-            } 
-            else
-            {
-                generoLetras = "hombre";
-
-
                 if (Alto.IsChecked)
                 {
-                    opcion += "alto";
-
+                    opciones[contador] = "alta";
+                    contador++;
                 }
                 if (Feo.IsChecked)
                 {
-                    opcion += "feo";
+                    opciones[contador] = "fea";
+                    contador++;
                 }
                 if (Listo.IsChecked)
                 {
-                    opcion += "listo";
+                    opciones[contador] = "lista";
+                    contador++;
                 }
                 if (Extravagante.IsChecked)
                 {
-                    opcion += "extravagante";
+                    opciones[contador] = "extravagante";
+                    contador++;
                 }
                 if (Grande.IsChecked)
                 {
-                    opcion += "grande";
+                    opciones[contador] = "grande";
+                    contador++;
                 }
                 if (Raro.IsChecked)
                 {
-                    opcion += "raro";
+                    opciones[contador] = "rara";
+                    contador++;
                 }
-                
+
+                string resultado = "";
+                if (contador > 1)
+                {
+                    for (int i = 0; i < contador - 1; i++)
+                    {
+                        resultado += opciones[i] + ", ";
+                    }
+                    resultado += "y " + opciones[contador - 1];
+                }
+                else if (contador == 1)
+                {
+                    resultado = opciones[0];
+                }
+
+                Resultado.Text = Nombre + " es " +  resultado;
             }
-            //Resultado.Text = resultado.ToString();
-            
-            
-           
+
+
+
+
+            //var nombre = Nombre.Text;
+            //// string resultado = "";
+            //// int resultado = 0;
+            //string[] opciones = new string[6];
+            //int contador = 0;
+
+            //if (mujer.IsChecked)
+            //{
+            //    if (Alto.IsChecked)
+            //    {
+            //        opciones[contador] = "alta";
+            //        contador++;
+            //    }
+            //    if (Feo.IsChecked)
+            //    {
+            //        opciones[contador] = "fea";
+            //        contador++;
+            //    }
+            //    if (Listo.IsChecked)
+            //    {
+            //        opciones[contador] = "lista";
+            //        contador++;
+            //    }
+            //    if (Extravagante.IsChecked)
+            //    {
+            //        opciones[contador] = "extravagante";
+            //        contador++;
+            //    }
+            //    if (Grande.IsChecked)
+            //    {
+            //        opciones[contador] = "grande";
+            //        contador++;
+            //    }
+            //    if (Raro.IsChecked)
+            //    {
+            //        opciones[contador] = "rara";
+            //        contador++;
+            //    }
+
+            //    string resultado = "";
+            //    if (contador > 1)
+            //    {
+            //        resultado = nombre + " es " + string.Join(", ", opciones.Take(contador - 1)) + " y " + opciones[contador - 1];
+            //    }
+            //    else if (contador == 1)
+            //    {
+            //        resultado = opciones[0];
+            //    }
+
+            //    Resultado.Text = resultado;
+            //}
+            //else
+            //{
+
+            //}
+
+
 
 
 
@@ -136,3 +146,7 @@ namespace CRITICOGRAFO__SLE
         }
     }
 }
+            
+            
+            
+   
