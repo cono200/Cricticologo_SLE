@@ -15,12 +15,12 @@
         </Label>
 
         <Frame 
-        WidthRequest="50"
-        HeightRequest="20">
+        >
             <Entry Placeholder="Daniel"
-                   TextColor="Red"
+                  
                    Keyboard="Text"
                    x:Name="Nombre"
+                   
            />
         </Frame>
 
